@@ -1,9 +1,11 @@
 <?php
-
-$regex = "/^(C|A|P)[0-9]{4}(G|H|I|K|L|M)$/";
-
-//$class = "C0318G";
-$class = "M0318G";
-$class = "C0318G";
-
-echo (preg_match($regex, $class));
+function validateTheNameOfTheClass ($name){
+    $pattern = '/^[ACP][0-9]{4,}+[GM]$/';
+    if(preg_match($pattern,$name)){
+        echo $name . " is a valid account. We can accept it."."<br>";
+    } else {
+        echo $name . " is an invalid account. Please try again."."<br>";
+    }
+}
+validateTheNameOfTheClass('C0318G');
+validateTheNameOfTheClass('M0318G, P0323A');

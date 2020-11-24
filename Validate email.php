@@ -1,12 +1,15 @@
 <?php
 
-$regex = "/^\w+\@\w+\.\w+$/";
-$email_arr = ["a@gmail.com", "ab@yahoo.com", "ab@gmail.", "@#abc@gmail.com", "abc@hotmail.com", "@gmail.com"];
 
-foreach ($email_arr as $arr1) {
-    if (preg_match($regex, $arr1)) {
-        echo "Email hop le $arr1<br>";
-    } elseif (!preg_match($regex, $arr1)) {
-        echo "Email ko hop le $arr1<br>";
+function validateEmail($Email)
+{
+    $pattern = '/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/';
+    if (preg_match($pattern, $Email)) {
+        echo $Email . " is a valid account. We can accept it." . "<br>";
+    } else {
+        echo $Email . " is an invalid account. Please try again." . "<br>";
     }
 }
+
+validateEmail('a@gmail.com');
+validateEmail('@gmail.com');
