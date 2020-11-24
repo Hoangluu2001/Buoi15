@@ -2,9 +2,9 @@
 function validateTheNameOfTheClass ($name){
     $pattern = '/^[ACP][0-9]{4,}+[GM]$/';
     if(preg_match($pattern,$name)){
-        echo $name . " is a valid account. We can accept it."."<br>";
+        echo $name . " hop le . chung toi chap nhan no"."<br>";
     } else {
-        echo $name . " is an invalid account. Please try again."."<br>";
+        echo $name . "khong hop le . vui long thu lai"."<br>";
     }
 }
 validateTheNameOfTheClass('C0318G');

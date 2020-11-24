@@ -5,9 +5,9 @@ function validateEmail($Email)
 {
     $pattern = '/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/';
     if (preg_match($pattern, $Email)) {
-        echo $Email . " is a valid account. We can accept it." . "<br>";
+        echo $Email . " hop le . We can accept it." . "<br>";
     } else {
-        echo $Email . " is an invalid account. Please try again." . "<br>";
+        echo $Email . " khong hop le . Please try again." . "<br>";
     }
 }
 
